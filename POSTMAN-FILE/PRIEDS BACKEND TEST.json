@@ -1,0 +1,57 @@
+{
+	"info": {
+		"_postman_id": "8a6906e7-b737-49ff-8036-2ec42d8e9751",
+		"name": "PRIEDS BACKEND TEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11553804"
+	},
+	"item": [
+		{
+			"name": "IMPORT DATA",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/import-data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"import-data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ENDPOINT TEST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"company_id\": \"RVS\",\r\n  \"payload\": \"PWAPJ.VI.AW.CXWX400.0600-2211-00035\",\r\n  \"reject_qr_list\": [\r\n    {\r\n      \"payload\": \"25 10 22 08:22 1CL201796\"\r\n    },\r\n    {\r\n      \"payload\": \"25 10 22 08:21 1CL101835\"\r\n    }\r\n  ],\r\n  \"new_qr_list\": [\r\n    {\r\n      \"payload\": \"25 10 22 08:25 1CL201802\"\r\n    },\r\n    {\r\n      \"payload\": \"25 10 22 08:27 1CL201805\"\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/edit-repacking-data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"edit-repacking-data"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
